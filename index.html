@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Examination Management System</h1>
+    </div>
+
+    <div class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username"><br><br>
+            <input type="password" id="password" placeholder="Password"><br><br>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div class="admin-panel hidden">
+            <h2>Admin Panel</h2>
+            <button onclick="showFacultyManagement()">Manage Faculty</button>
+            <button onclick="showStudentManagement()">Manage Students</button>
+            <button onclick="showQuestionBank()">Manage Question Bank</button>
+            <div id="adminContent"></div>
+        </div>
+
+        <div class="faculty-panel hidden">
+            <h2>Faculty Panel</h2>
+            <button onclick="createExam()">Create Exam</button>
+            <button onclick="manageQuestions()">Manage Questions</button>
+            <div id="facultyContent"></div>
+        </div>
+
+        <div class="student-panel hidden">
+            <h2>Student Panel</h2>
+            <button onclick="startExam()">Start Exam</button>
+            <div id="studentContent"></div>
+        </div>
+
+        <div class="exam-form hidden">
+            <h2>Exam</h2>
+            <form id="examForm"></form>
+            <button onclick="submitExam()">Submit Exam</button>
+            <div id="examResult" class="result"></div>
+            <div id="timer"></div>
+        </div>
+
+        <div id="fullScreenDiv" class="full-screen hidden">
+            <h2>Exam in progress. Full screen mode.</h2>
+            <div id="fullScreenContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
